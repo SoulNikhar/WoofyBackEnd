@@ -12,12 +12,12 @@ const userSchema = new mongoose.Schema({
         nationalID: String,
     },
     contactInfo: {
-        phoneNumber: String,
+        phoneNumber: Number,
         address: {
             street: String,
             city: String,
             state: String,
-            zipCode: String,
+            pinCode: Number,
             country: String,
         },
     },
@@ -38,3 +38,44 @@ const userSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("users", userSchema);
+
+
+
+
+// input formate should be like 
+
+// {
+//     "name": "John Farmer",
+//     "email": "johnfarmer@example.com",
+//     "password": "farmer123",
+//     "category": "farmer",
+//     "personalInfo": {
+//       "dateOfBirth": "1985-05-10",
+//       "gender": "Male",
+//       "nationalID": "1234567890"
+//     },
+//     "contactInfo": {
+//       "phoneNumber": "+1234567890",
+//       "address": {
+//         "street": "456 Farm Road",
+//         "city": "Farmville",
+//         "state": "Farming State",
+//         "zipCode": "54321",
+//         "country": "Farmland"
+//       }
+//     },
+//     "farmInfo": {
+//       "farmName": "John's Farm",
+//       "farmLocation": "Farmville",
+//       "farmSize": 50,
+//       "farmingActivities": "Crop farming, Livestock",
+//       "experienceYears": 15
+//     },
+//     "woolInfo": {
+//       "animalType": "Sheep",
+//       "animalCount": 100,
+//       "processingFacilities": "On-site",
+//       "productionPractices": "Organic",
+//       "specializations": ["Merino", "Alpaca Wool"]
+//     }
+//   }
