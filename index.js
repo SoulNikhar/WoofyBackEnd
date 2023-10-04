@@ -32,11 +32,11 @@ app.post("/login", async (req, res) => {
 });
 
 
-app.post("/producerdashboard" , async (req , res)=>{
-  if (condition) {
-    let producerdetails = new 
-  }
-})
+// app.post("/dashboard" , async (req , res)=>{
+//   if (condition) {
+//     let producerdetails = new 
+//   }
+// })
 
 app.listen(5000, () => {
   console.log("sucessfully connected... ");

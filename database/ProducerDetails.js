@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
+    userId:Number,
     name: String,
     email:String,
-    password:String
+    
 });
 
-module.exports = mongoose.model("users",userSchema);
+module.exports = mongoose.model("producerdetails",userSchema);
