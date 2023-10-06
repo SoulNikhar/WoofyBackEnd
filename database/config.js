@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-// mongoose.connect("mongodb://localhost:27017/databaseSecond");
+// mongoose.connect('mongodb://127.0.0.1:27017/e-commerce', {
 
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/e-commerce', {
-    useNewUrlParser: true,
+mongoose.connect('mongodb://127.0.0.1:27017/e-commerce', {
+    useNewUrlParser: true, 
     useUnifiedTopology: true,
 }).then(() => {
     console.log("Connected to MongoDB");
